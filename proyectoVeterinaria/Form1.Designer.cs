@@ -38,6 +38,7 @@ namespace proyectoVeterinaria
             this.btnHorarios = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblNombreDeUsuario = new System.Windows.Forms.Label();
+            this.btnMascotas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -121,11 +122,21 @@ namespace proyectoVeterinaria
             this.lblNombreDeUsuario.TabIndex = 8;
             this.lblNombreDeUsuario.Text = "Nombre de usuario aqui";
             // 
+            // btnMascotas
+            // 
+            this.btnMascotas.Location = new System.Drawing.Point(204, 359);
+            this.btnMascotas.Name = "btnMascotas";
+            this.btnMascotas.Size = new System.Drawing.Size(143, 82);
+            this.btnMascotas.TabIndex = 9;
+            this.btnMascotas.Text = "Mascotas";
+            this.btnMascotas.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 541);
+            this.Controls.Add(this.btnMascotas);
             this.Controls.Add(this.lblNombreDeUsuario);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnHorarios);
@@ -153,6 +164,7 @@ namespace proyectoVeterinaria
         private System.Windows.Forms.Button btnHorarios;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Label lblNombreDeUsuario;
+        private System.Windows.Forms.Button btnMascotas;
     }
 }
 
