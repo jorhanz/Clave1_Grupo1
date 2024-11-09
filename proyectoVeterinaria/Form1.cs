@@ -34,9 +34,10 @@ namespace proyectoVeterinaria
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            RegistroUsuarios registroForm = new RegistroUsuarios();
+            VistaUsuarios vistaUsuariosForm = new VistaUsuarios();
 
-            registroForm.Show();
+            
+            vistaUsuariosForm.Show();
         }
     }
 }

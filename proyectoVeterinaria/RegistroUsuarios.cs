@@ -77,8 +77,8 @@ namespace proyectoVeterinaria
                     // Mostrar mensaje de confirmación
                     MessageBox.Show("Usuario registrado correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Limpiar los campos después de registrar
-                    LimpiarCampos();
+                    // Cerrar el formulario de registro después de mostrar el mensaje de éxito
+                    this.Close();
                 }
                 else
                 {
