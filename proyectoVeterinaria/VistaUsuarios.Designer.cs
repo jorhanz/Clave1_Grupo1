@@ -32,6 +32,7 @@ namespace proyectoVeterinaria
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
+            this.btnEliminarUsuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace proyectoVeterinaria
             // 
             // btnAgregarUsuario
             // 
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(641, 60);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(641, 78);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarUsuario.TabIndex = 2;
@@ -63,11 +64,24 @@ namespace proyectoVeterinaria
             this.btnAgregarUsuario.UseVisualStyleBackColor = true;
             this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(546, 78);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarUsuario.TabIndex = 3;
+            this.btnEliminarUsuario.Text = "Eliminar";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
+            // 
             // VistaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvUsuarios);
@@ -85,5 +99,6 @@ namespace proyectoVeterinaria
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregarUsuario;
+        private System.Windows.Forms.Button btnEliminarUsuario;
     }
 }

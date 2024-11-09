@@ -63,5 +63,54 @@ namespace proyectoVeterinaria
             // Actualizar la lista de usuarios después de cerrar el formulario de registro
             CargarUsuarios();
         }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.SelectedRows.Count > 0)
+            {
+                // Obtener el IdUsuario del usuario seleccionado
+                int idUsuario = Convert.ToInt32(dgvUsuarios.SelectedRows[0].Cells["IdUsuario"].Value);
+
+                // Confirmar la eliminación
+                var confirmResult = MessageBox.Show("¿Estás seguro de que deseas eliminar este usuario?",
+                                                     "Confirmar Eliminación",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Warning);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (MySqlConnection conexion = new Conexion().GetConnection())
+                        {
+                            conexion.Open();
+                            string query = "DELETE FROM Usuarios WHERE IdUsuario = @IdUsuario";
+                            MySqlCommand cmd = new MySqlCommand(query, conexion);
+                            cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                            int result = cmd.ExecuteNonQuery();
+
+                            if (result > 0)
+                            {
+                                MessageBox.Show("Usuario eliminado correctamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarUsuarios(); // Actualizar la lista de usuarios después de eliminar
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al eliminar el usuario. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un usuario para eliminar.", "Seleccionar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
