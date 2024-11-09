@@ -28,5 +28,19 @@ namespace CapaDatos
                 }
             }
         }
+        public bool VerificarCredenciales(string correo, string clave)
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE Correo = @Correo AND Clave = @Clave";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Clave", clave);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+        }
     }
 }

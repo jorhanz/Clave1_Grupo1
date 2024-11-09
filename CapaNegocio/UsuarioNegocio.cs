@@ -21,5 +21,10 @@ namespace CapaNegocio
 
             return usuarioDatos.InsertarUsuario(nombreCompleto, correo, clave, idRol);
         }
+        public bool LoginUsuario(string correo, string clave)
+        {
+            return usuarioDatos.VerificarCredenciales(correo, clave);
+        }
+
     }
 }
