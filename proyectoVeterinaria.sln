@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.35026.282
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoVeterinaria", "proyectoVeterinaria\proyectoVeterinaria.csproj", "{978FB612-92A3-4D2E-B736-CEAB1795678C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{C005F79C-163E-4D54-988B-9A793B3CDE85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{778DEED4-7CB7-4EFE-BFA4-291A45D1ACB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{978FB612-92A3-4D2E-B736-CEAB1795678C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{978FB612-92A3-4D2E-B736-CEAB1795678C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{978FB612-92A3-4D2E-B736-CEAB1795678C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C005F79C-163E-4D54-988B-9A793B3CDE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C005F79C-163E-4D54-988B-9A793B3CDE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C005F79C-163E-4D54-988B-9A793B3CDE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C005F79C-163E-4D54-988B-9A793B3CDE85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778DEED4-7CB7-4EFE-BFA4-291A45D1ACB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778DEED4-7CB7-4EFE-BFA4-291A45D1ACB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778DEED4-7CB7-4EFE-BFA4-291A45D1ACB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778DEED4-7CB7-4EFE-BFA4-291A45D1ACB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

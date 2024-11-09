@@ -94,6 +94,7 @@ namespace proyectoVeterinaria
             this.btnUsuarios.TabIndex = 5;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnHorarios
             // 
@@ -148,6 +149,7 @@ namespace proyectoVeterinaria
             this.Controls.Add(this.lblBienvenido);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
