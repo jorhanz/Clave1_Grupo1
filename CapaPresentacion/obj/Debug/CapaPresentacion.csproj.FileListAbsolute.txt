@@ -1,0 +1,14 @@
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\Usuario\OneDrive\Escritorio\VETERINARIA\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
