@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMascota.Designer.cs">
+      <DependentUpon>AgregarMascota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +124,21 @@
     <Compile Include="RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaMascotas.Designer.cs">
+      <DependentUpon>VistaMascotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VistaUsuarios.Designer.cs">
       <DependentUpon>VistaUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarMascota.resx">
+      <DependentUpon>AgregarMascota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaMascotas.resx">
+      <DependentUpon>VistaMascotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaUsuarios.resx">
       <DependentUpon>VistaUsuarios.cs</DependentUpon>

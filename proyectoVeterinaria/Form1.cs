@@ -39,5 +39,11 @@ namespace proyectoVeterinaria
             
             vistaUsuariosForm.Show();
         }
+
+        private void btnMascotas_Click(object sender, EventArgs e)
+        {
+            VistaMascotas vistaMascotas = new VistaMascotas();
+            vistaMascotas.ShowDialog();
+        }
     }
 }

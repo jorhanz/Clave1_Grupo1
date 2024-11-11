@@ -112,5 +112,15 @@ namespace proyectoVeterinaria
                 MessageBox.Show("Por favor, seleccione un usuario para eliminar.", "Seleccionar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

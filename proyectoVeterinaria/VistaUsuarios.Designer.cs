@@ -39,26 +39,32 @@ namespace proyectoVeterinaria
             // dgvUsuarios
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(40, 110);
+            this.dgvUsuarios.Location = new System.Drawing.Point(53, 135);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(676, 318);
+            this.dgvUsuarios.RowHeadersWidth = 51;
+            this.dgvUsuarios.Size = new System.Drawing.Size(901, 391);
             this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(315, 39);
+            this.label1.Location = new System.Drawing.Point(420, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 33);
+            this.label1.Size = new System.Drawing.Size(174, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuarios";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnAgregarUsuario
             // 
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(641, 78);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(855, 96);
+            this.btnAgregarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(100, 28);
             this.btnAgregarUsuario.TabIndex = 2;
             this.btnAgregarUsuario.Text = "Agregar usuario";
             this.btnAgregarUsuario.UseVisualStyleBackColor = true;
@@ -68,9 +74,10 @@ namespace proyectoVeterinaria
             // 
             this.btnEliminarUsuario.BackColor = System.Drawing.Color.Red;
             this.btnEliminarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(546, 78);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(728, 96);
+            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(100, 28);
             this.btnEliminarUsuario.TabIndex = 3;
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
@@ -78,13 +85,14 @@ namespace proyectoVeterinaria
             // 
             // VistaUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvUsuarios);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaUsuarios";
             this.Text = "VistaUsuarios";
             this.Load += new System.EventHandler(this.VistaUsuarios_Load);

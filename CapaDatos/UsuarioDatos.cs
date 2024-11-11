@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 
 namespace CapaDatos
 {
@@ -40,6 +41,19 @@ namespace CapaDatos
 
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 return count > 0;
+            }
+        }
+        public DataTable ObtenerPropietarios()
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT IdUsuario, NombreCompleto FROM Usuarios";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable propietarios = new DataTable();
+                adapter.Fill(propietarios);
+                return propietarios;
             }
         }
     }
