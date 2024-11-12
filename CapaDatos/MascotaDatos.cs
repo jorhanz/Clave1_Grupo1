@@ -17,10 +17,12 @@ namespace CapaDatos
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
                 conexion.Open();
-                string query = @"SELECT m.IdMascota, m.NombreMascota, m.Especie, m.Raza, m.FechaNacimiento, 
-                         u.NombreCompleto AS NombrePropietario
+                string query = @"SELECT m.IdMascota, m.NombreMascota, e.NombreEspecie AS Especie, m.Raza, 
+                         m.FechaNacimiento, u.NombreCompleto AS Propietario
                          FROM Mascotas m
+                         INNER JOIN Especies e ON m.IdEspecie = e.IdEspecie
                          INNER JOIN Usuarios u ON m.IdPropietario = u.IdUsuario";
+
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable mascotas = new DataTable();
@@ -29,21 +31,46 @@ namespace CapaDatos
             }
         }
         // Método para insertar una nueva mascota
-        public bool InsertarMascota(int idDuenio, string nombre, string especie, string raza, DateTime fechaNacimiento)
+        public bool InsertarMascota(int idPropietario, string nombre, int idEspecie, string raza, DateTime fechaNacimiento)
         {
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
                 conexion.Open();
-                string query = "INSERT INTO Mascotas (id_duenio, nombre, especie, raza, fecha_nacimiento) " +
-                               "VALUES (@IdDuenio, @Nombre, @Especie, @Raza, @FechaNacimiento)";
+                string query = "INSERT INTO Mascotas (IdPropietario, NombreMascota, IdEspecie, Raza, FechaNacimiento) " +
+                               "VALUES (@IdPropietario, @NombreMascota, @IdEspecie, @Raza, @FechaNacimiento)";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
-                cmd.Parameters.AddWithValue("@IdDuenio", idDuenio);
-                cmd.Parameters.AddWithValue("@Nombre", nombre);
-                cmd.Parameters.AddWithValue("@Especie", especie);
+                cmd.Parameters.AddWithValue("@IdPropietario", idPropietario);
+                cmd.Parameters.AddWithValue("@NombreMascota", nombre);
+                cmd.Parameters.AddWithValue("@IdEspecie", idEspecie);
                 cmd.Parameters.AddWithValue("@Raza", raza);
                 cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
 
                 return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public DataTable ObtenerEspecies()
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT IdEspecie, NombreEspecie FROM Especies";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable especies = new DataTable();
+                adapter.Fill(especies);
+                return especies;
+            }
+        }
+        public bool EliminarMascota(int idMascota)
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = "DELETE FROM Mascotas WHERE IdMascota = @IdMascota";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@IdMascota", idMascota);
+
+                return cmd.ExecuteNonQuery() > 0; // Devuelve true si se eliminó con éxito
             }
         }
     }

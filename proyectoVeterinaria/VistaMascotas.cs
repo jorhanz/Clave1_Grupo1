@@ -58,5 +58,40 @@ namespace proyectoVeterinaria
             agregarMascotaForm.ShowDialog();
             CargarMascotas(); // Actualiza la lista después de cerrar el formulario
         }
+
+        private void btnEliminarMascota_Click(object sender, EventArgs e)
+        {
+            if (dgvMascotas.SelectedRows.Count > 0)
+            {
+                // Obtener el ID de la mascota seleccionada
+                int idMascota = Convert.ToInt32(dgvMascotas.SelectedRows[0].Cells["IdMascota"].Value);
+
+                // Confirmación de eliminación
+                var confirmResult = MessageBox.Show("¿Estás seguro de que deseas eliminar esta mascota?",
+                                                     "Confirmar Eliminación",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Warning);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    MascotaNegocio mascotaNegocio = new MascotaNegocio();
+                    bool eliminado = mascotaNegocio.EliminarMascota(idMascota);
+
+                    if (eliminado)
+                    {
+                        MessageBox.Show("Mascota eliminada correctamente.");
+                        CargarMascotas(); // Recargar la lista de mascotas
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar la mascota. Intenta nuevamente.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona una mascota para eliminar.");
+            }
+        }
     }
 }

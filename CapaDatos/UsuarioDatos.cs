@@ -43,17 +43,18 @@ namespace CapaDatos
                 return count > 0;
             }
         }
-        public DataTable ObtenerPropietarios()
+        public DataTable ObtenerClientes()
         {
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
                 conexion.Open();
-                string query = "SELECT IdUsuario, NombreCompleto FROM Usuarios";
+                // Se coloca IdRol 3 ya que es el que corresponde a los usuarios tipo cliente
+                string query = "SELECT IdUsuario, NombreCompleto FROM Usuarios WHERE IdRol = 3";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable propietarios = new DataTable();
-                adapter.Fill(propietarios);
-                return propietarios;
+                DataTable clientes = new DataTable();
+                adapter.Fill(clientes);
+                return clientes;
             }
         }
     }

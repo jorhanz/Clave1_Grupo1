@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarHorario.Designer.cs">
+      <DependentUpon>AgregarHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +136,21 @@
     <Compile Include="VistaMascotas.Designer.cs">
       <DependentUpon>VistaMascotas.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistasHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistasHorarios.Designer.cs">
+      <DependentUpon>VistasHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VistaUsuarios.Designer.cs">
       <DependentUpon>VistaUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarHorario.resx">
+      <DependentUpon>AgregarHorario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarMascota.resx">
       <DependentUpon>AgregarMascota.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaMascotas.resx">
       <DependentUpon>VistaMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistasHorarios.resx">
+      <DependentUpon>VistasHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaUsuarios.resx">
       <DependentUpon>VistaUsuarios.cs</DependentUpon>

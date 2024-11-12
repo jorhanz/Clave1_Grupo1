@@ -27,9 +27,10 @@ namespace CapaNegocio
         {
             return usuarioDatos.VerificarCredenciales(correo, clave);
         }
-        public DataTable ObtenerPropietarios()
+        public DataTable ObtenerClientes()
         {
-            return usuarioDatos.ObtenerPropietarios();
+            UsuarioDatos usuarioDatos = new UsuarioDatos();
+            return usuarioDatos.ObtenerClientes();
         }
 
     }

@@ -47,6 +47,7 @@ namespace proyectoVeterinaria
             this.btnEliminarMascota.TabIndex = 7;
             this.btnEliminarMascota.Text = "Eliminar";
             this.btnEliminarMascota.UseVisualStyleBackColor = false;
+            this.btnEliminarMascota.Click += new System.EventHandler(this.btnEliminarMascota_Click);
             // 
             // btnAgregarMascota
             // 

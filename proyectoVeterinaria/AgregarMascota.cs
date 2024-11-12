@@ -20,11 +20,16 @@ namespace proyectoVeterinaria
 
         private void AgregarMascota_Load(object sender, EventArgs e)
         {
-            // Llama al método de la capa de negocio para obtener los propietarios
+            // Obtener los propietarios que son clientes desde la capa de negocio
             UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-            cmbPropietario.DataSource = usuarioNegocio.ObtenerPropietarios(); // Implementa este método para devolver los datos de los propietarios
-            cmbPropietario.DisplayMember = "NombreCompleto";
-            cmbPropietario.ValueMember = "IdUsuario";
+            cmbPropietario.DataSource = usuarioNegocio.ObtenerClientes();
+            cmbPropietario.DisplayMember = "NombreCompleto"; // Nombre a mostrar
+            cmbPropietario.ValueMember = "IdUsuario"; // Valor a guardar (IdUsuario)
+            // Obtener las especies desde la capa de negocio
+            MascotaNegocio mascotaNegocio = new MascotaNegocio();
+            cmbEspecie.DataSource = mascotaNegocio.ObtenerEspecies();
+            cmbEspecie.DisplayMember = "NombreEspecie"; // Nombre a mostrar
+            cmbEspecie.ValueMember = "IdEspecie"; // Valor a guardar (IdEspecie)
         }
 
         private void btnGuardarMascota_Click(object sender, EventArgs e)
@@ -34,16 +39,17 @@ namespace proyectoVeterinaria
                 MascotaNegocio mascotaNegocio = new MascotaNegocio();
                 int idPropietario = (int)cmbPropietario.SelectedValue;
                 string nombre = txtNombreMascota.Text;
-                string especie = cmbEspecie.SelectedItem.ToString();
+                int idEspecie = (int)cmbEspecie.SelectedValue; // Obtener el IdEspecie desde el ComboBox
                 string raza = txtRaza.Text;
                 DateTime fechaNacimiento = dtpFechaNacimiento.Value;
 
-                bool resultado = mascotaNegocio.RegistrarMascota(idPropietario, nombre, especie, raza, fechaNacimiento);
+                // Enviar todos los datos, incluido IdEspecie, para registrar la mascota
+                bool resultado = mascotaNegocio.RegistrarMascota(idPropietario, nombre, idEspecie, raza, fechaNacimiento);
 
                 if (resultado)
                 {
                     MessageBox.Show("Mascota registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Cierra el formulario después de guardar
+                    this.Close();
                 }
                 else
                 {
@@ -54,6 +60,11 @@ namespace proyectoVeterinaria
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

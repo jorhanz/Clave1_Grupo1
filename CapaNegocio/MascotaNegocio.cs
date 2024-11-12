@@ -19,12 +19,20 @@ namespace CapaNegocio
         }
 
         // Método para registrar una mascota
-        public bool RegistrarMascota(int idDuenio, string nombre, string especie, string raza, DateTime fechaNacimiento)
+        public bool RegistrarMascota(int idPropietario, string nombre, int idEspecie, string raza, DateTime fechaNacimiento)
         {
-            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(especie))
-                throw new ArgumentException("El nombre de la mascota y la especie son obligatorios.");
-
-            return mascotaDatos.InsertarMascota(idDuenio, nombre, especie, raza, fechaNacimiento);
+            MascotaDatos mascotaDatos = new MascotaDatos();
+            return mascotaDatos.InsertarMascota(idPropietario, nombre, idEspecie, raza, fechaNacimiento);
+        }
+        public DataTable ObtenerEspecies()
+        {
+            MascotaDatos mascotaDatos = new MascotaDatos();
+            return mascotaDatos.ObtenerEspecies();
+        }
+        public bool EliminarMascota(int idMascota)
+        {
+            MascotaDatos mascotaDatos = new MascotaDatos();
+            return mascotaDatos.EliminarMascota(idMascota);
         }
     }
 }
