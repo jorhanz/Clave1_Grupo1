@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CitaNegocio.cs" />
+    <Compile Include="ExpedienteNegocio.cs" />
     <Compile Include="HorarioNegocio.cs" />
     <Compile Include="MascotaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

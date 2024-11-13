@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="CitaDatos.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="ExpedienteDatos.cs" />
     <Compile Include="HorarioDatos.cs" />
     <Compile Include="MascotaDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
