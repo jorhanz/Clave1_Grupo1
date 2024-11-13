@@ -37,5 +37,10 @@ namespace proyectoVeterinaria
         {
             CargarMascotas();
         }
+
+        private void btnAgregarExpediente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
