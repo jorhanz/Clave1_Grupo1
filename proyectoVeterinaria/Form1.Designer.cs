@@ -58,6 +58,7 @@ namespace proyectoVeterinaria
             this.btnCitas.TabIndex = 1;
             this.btnCitas.Text = "Citas medicas";
             this.btnCitas.UseVisualStyleBackColor = true;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnRegistrarPagos
             // 

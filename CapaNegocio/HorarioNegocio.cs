@@ -26,6 +26,10 @@ namespace CapaNegocio
             HorarioDatos horarioDatos = new HorarioDatos();
             return horarioDatos.EliminarHorario(idHorario);
         }
+        public DataTable ObtenerHorariosPorVeterinarioYDia(int idVeterinario, string diaSemana)
+        {
+            return horarioDatos.ObtenerHorariosPorVeterinarioYDia(idVeterinario, diaSemana);
+        }
 
     }
 }

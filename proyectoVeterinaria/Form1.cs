@@ -51,5 +51,12 @@ namespace proyectoVeterinaria
             VistasHorarios vistasHorarios = new VistasHorarios();
             vistasHorarios.ShowDialog();
         }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            VistaCitas vistaCitas = new VistaCitas();
+            vistaCitas.ShowDialog();
+
+        }
     }
 }

@@ -62,6 +62,23 @@ namespace CapaDatos
                 }
             }
         }
+        public DataTable ObtenerHorariosPorVeterinarioYDia(int idVeterinario, string diaSemana)
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = @"SELECT IdHorario, HoraInicio, HoraFin 
+                         FROM Horarios 
+                         WHERE IdVeterinario = @IdVeterinario AND DiaSemana = @DiaSemana";
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@IdVeterinario", idVeterinario);
+                cmd.Parameters.AddWithValue("@DiaSemana", diaSemana);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable horarios = new DataTable();
+                adapter.Fill(horarios);
+                return horarios;
+            }
+        }
 
     }
 }
