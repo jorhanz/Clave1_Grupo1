@@ -31,5 +31,6 @@ namespace CapaNegocio
             return horarioDatos.ObtenerHorariosPorVeterinarioYDia(idVeterinario, diaSemana);
         }
 
+
     }
 }

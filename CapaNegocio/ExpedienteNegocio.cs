@@ -21,5 +21,14 @@ namespace CapaNegocio
         {
             return expedienteDatos.ObtenerHistorialClinico(idMascota);
         }
+        public DataTable ObtenerHistorialPorMascota(int idMascota)
+        {
+            return expedienteDatos.ObtenerHistorialPorMascota(idMascota);
+        }
+        public bool GuardarExpediente(int idMascota, DateTime fechaConsulta, string descripcion, int idVeterinario)
+        {
+            ExpedienteDatos expedienteDatos = new ExpedienteDatos();
+            return expedienteDatos.InsertarExpediente(idMascota, fechaConsulta, descripcion, idVeterinario);
+        }
     }
 }
