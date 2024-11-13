@@ -67,26 +67,38 @@ namespace CapaDatos
         {
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
-                conexion.Open();
-                string query = @"INSERT INTO ExpedienteClinico (IdMascota, FechaConsulta, Descripcion, IdVeterinario) 
-                         VALUES (@IdMascota, @FechaConsulta, @Descripcion, @IdVeterinario)";
+                try
+                {
+                    conexion.Open();
+                    Console.WriteLine("Conexión abierta exitosamente");
 
-                MySqlCommand cmd = new MySqlCommand(query, conexion);
-                cmd.Parameters.AddWithValue("@IdMascota", idMascota);
-                cmd.Parameters.AddWithValue("@FechaConsulta", fechaConsulta);
-                cmd.Parameters.AddWithValue("@Descripcion", descripcion);
-                cmd.Parameters.AddWithValue("@IdVeterinario", idVeterinario);
+                    string query = @"INSERT INTO ExpedienteClinico (IdMascota, FechaConsulta, Descripcion, IdVeterinario) 
+                             VALUES (@IdMascota, @FechaConsulta, @Descripcion, @IdVeterinario)";
 
-                // Log de los parámetros para verificar los valores
-                Console.WriteLine("Valores de los parámetros:");
-                Console.WriteLine("IdMascota: " + idMascota);
-                Console.WriteLine("FechaConsulta: " + fechaConsulta);
-                Console.WriteLine("Descripcion: " + descripcion);
-                Console.WriteLine("IdVeterinario: " + idVeterinario);
+                    MySqlCommand cmd = new MySqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@IdMascota", idMascota);
+                    cmd.Parameters.AddWithValue("@FechaConsulta", fechaConsulta);
+                    cmd.Parameters.AddWithValue("@Descripcion", descripcion);
+                    cmd.Parameters.AddWithValue("@IdVeterinario", idVeterinario);
 
-                int result = cmd.ExecuteNonQuery();
-                return result > 0;
+                    // Log para verificar los valores de los parámetros
+                    Console.WriteLine("Valores para la inserción:");
+                    Console.WriteLine("IdMascota: " + idMascota);
+                    Console.WriteLine("FechaConsulta: " + fechaConsulta);
+                    Console.WriteLine("Descripcion: " + descripcion);
+                    Console.WriteLine("IdVeterinario: " + idVeterinario);
 
+                    int result = cmd.ExecuteNonQuery();
+
+                    Console.WriteLine("Resultado de la inserción: " + result);
+
+                    return result > 0;
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error en la inserción de expediente: " + ex.Message);
+                    return false;
+                }
             }
         } 
     }

@@ -27,8 +27,23 @@ namespace CapaNegocio
         }
         public bool GuardarExpediente(int idMascota, DateTime fechaConsulta, string descripcion, int idVeterinario)
         {
-            ExpedienteDatos expedienteDatos = new ExpedienteDatos();
-            return expedienteDatos.InsertarExpediente(idMascota, fechaConsulta, descripcion, idVeterinario);
+            // Validaciones básicas
+            if (idMascota <= 0 || idVeterinario <= 0 || string.IsNullOrWhiteSpace(descripcion))
+            {
+                throw new ArgumentException("Valores inválidos para el expediente.");
+            }
+
+            try
+            {
+                bool resultado = expedienteDatos.InsertarExpediente(idMascota, fechaConsulta, descripcion, idVeterinario);
+                Console.WriteLine("Resultado de la inserción en base de datos: " + resultado);
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al intentar guardar el expediente: " + ex.Message);
+                return false;
+            }
         }
     }
 }
