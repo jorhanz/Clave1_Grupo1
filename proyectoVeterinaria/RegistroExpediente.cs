@@ -35,7 +35,7 @@ namespace proyectoVeterinaria
             // Configura los encabezados de las columnas si es necesario
             dgvHistorialExpediente.Columns["FechaConsulta"].HeaderText = "Fecha de Consulta";
             dgvHistorialExpediente.Columns["Descripcion"].HeaderText = "Descripción";
-            dgvHistorialExpediente.Columns["IdVeterinario"].HeaderText = "Veterinario";
+            dgvHistorialExpediente.Columns["Veterinario"].HeaderText = "Veterinario";
         }
 
         private void btnGuardarExpediente_Click(object sender, EventArgs e)

@@ -49,9 +49,10 @@ namespace CapaDatos
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
                 conexion.Open();
-                string query = @"SELECT FechaConsulta, Descripcion, IdVeterinario 
-                         FROM ExpedienteClinico 
-                         WHERE IdMascota = @IdMascota";
+                string query = @"SELECT e.FechaConsulta, e.Descripcion, v.NombreCompleto AS Veterinario 
+                         FROM ExpedienteClinico e
+                         INNER JOIN Usuarios v ON e.IdVeterinario = v.IdUsuario
+                         WHERE e.IdMascota = @IdMascota";
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 cmd.Parameters.AddWithValue("@IdMascota", idMascota);
 
