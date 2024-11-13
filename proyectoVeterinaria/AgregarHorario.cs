@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using CapaDatos;
 
 namespace proyectoVeterinaria
 {
@@ -19,7 +21,20 @@ namespace proyectoVeterinaria
 
         private void AgregarHorario_Load(object sender, EventArgs e)
         {
-            checkedListBoxDias.Items.AddRange(new string[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo" });
+            //CheckedListBox con los días de la semana
+            checkedListBoxDias.Items.Add("Lunes");
+            checkedListBoxDias.Items.Add("Martes");
+            checkedListBoxDias.Items.Add("Miércoles");
+            checkedListBoxDias.Items.Add("Jueves");
+            checkedListBoxDias.Items.Add("Viernes");
+            checkedListBoxDias.Items.Add("Sábado");
+            checkedListBoxDias.Items.Add("Domingo");
+
+            // Cargar veterinarios en el ComboBox
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            cmbVeterinario.DataSource = usuarioNegocio.ObtenerVeterinarios();
+            cmbVeterinario.DisplayMember = "NombreCompleto";
+            cmbVeterinario.ValueMember = "IdUsuario";
 
         }
 
@@ -62,5 +77,5 @@ namespace proyectoVeterinaria
         }
     }
         
-    }
+    
 }

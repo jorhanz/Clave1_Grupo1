@@ -32,6 +32,11 @@ namespace CapaNegocio
             UsuarioDatos usuarioDatos = new UsuarioDatos();
             return usuarioDatos.ObtenerClientes();
         }
+        public DataTable ObtenerVeterinarios()
+        {
+            UsuarioDatos usuarioDatos = new UsuarioDatos();
+            return usuarioDatos.ObtenerVeterinarios();
+        }
 
     }
 }

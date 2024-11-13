@@ -9,7 +9,7 @@ namespace CapaDatos
     public class Conexion
     {
         // Cadena de conexión a la base de datos
-        public static string cadena = "Server=138.197.126.211;Database=veterinaria;User=usuarioC;Password=v3Terinaria@1a;";
+        public static string cadena = "Server=138.197.126.211;Database=veterinaria;User=usuarioC;Password=nuevaContra@1;";
 
         // Método para obtener la conexión
         public MySqlConnection GetConnection()

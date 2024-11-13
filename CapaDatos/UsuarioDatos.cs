@@ -57,5 +57,22 @@ namespace CapaDatos
                 return clientes;
             }
         }
+        public DataTable ObtenerVeterinarios()
+        {
+            using (MySqlConnection conexion = new Conexion().GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT IdUsuario, NombreCompleto FROM Usuarios WHERE IdRol = @IdRol";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@IdRol", 2); //el rol de veterinario IdRol = 2.
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable veterinarios = new DataTable();
+                    adapter.Fill(veterinarios);
+                    return veterinarios;
+                }
+            }
+        }
     }
 }

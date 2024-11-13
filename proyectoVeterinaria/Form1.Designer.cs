@@ -44,59 +44,53 @@ namespace proyectoVeterinaria
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(516, 110);
-            this.lblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBienvenido.Location = new System.Drawing.Point(387, 89);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(146, 17);
+            this.lblBienvenido.Size = new System.Drawing.Size(111, 13);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido a Cat-Dog";
             // 
             // btnCitas
             // 
-            this.btnCitas.Location = new System.Drawing.Point(272, 182);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCitas.Location = new System.Drawing.Point(204, 148);
             this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(191, 101);
+            this.btnCitas.Size = new System.Drawing.Size(143, 82);
             this.btnCitas.TabIndex = 1;
             this.btnCitas.Text = "Citas medicas";
             this.btnCitas.UseVisualStyleBackColor = true;
             // 
             // btnRegistrarPagos
             // 
-            this.btnRegistrarPagos.Location = new System.Drawing.Point(520, 182);
-            this.btnRegistrarPagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarPagos.Location = new System.Drawing.Point(390, 148);
             this.btnRegistrarPagos.Name = "btnRegistrarPagos";
-            this.btnRegistrarPagos.Size = new System.Drawing.Size(191, 101);
+            this.btnRegistrarPagos.Size = new System.Drawing.Size(143, 82);
             this.btnRegistrarPagos.TabIndex = 2;
             this.btnRegistrarPagos.Text = "Registrar pagos";
             this.btnRegistrarPagos.UseVisualStyleBackColor = true;
             // 
             // btnTarjetaDeVacunacion
             // 
-            this.btnTarjetaDeVacunacion.Location = new System.Drawing.Point(272, 316);
-            this.btnTarjetaDeVacunacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTarjetaDeVacunacion.Location = new System.Drawing.Point(204, 257);
             this.btnTarjetaDeVacunacion.Name = "btnTarjetaDeVacunacion";
-            this.btnTarjetaDeVacunacion.Size = new System.Drawing.Size(191, 101);
+            this.btnTarjetaDeVacunacion.Size = new System.Drawing.Size(143, 82);
             this.btnTarjetaDeVacunacion.TabIndex = 3;
             this.btnTarjetaDeVacunacion.Text = "Tarjeta de vacunacion";
             this.btnTarjetaDeVacunacion.UseVisualStyleBackColor = true;
             // 
             // btnHistoriaClinica
             // 
-            this.btnHistoriaClinica.Location = new System.Drawing.Point(756, 182);
-            this.btnHistoriaClinica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistoriaClinica.Location = new System.Drawing.Point(567, 148);
             this.btnHistoriaClinica.Name = "btnHistoriaClinica";
-            this.btnHistoriaClinica.Size = new System.Drawing.Size(191, 101);
+            this.btnHistoriaClinica.Size = new System.Drawing.Size(143, 82);
             this.btnHistoriaClinica.TabIndex = 4;
             this.btnHistoriaClinica.Text = "Historia clinica";
             this.btnHistoriaClinica.UseVisualStyleBackColor = true;
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(520, 316);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsuarios.Location = new System.Drawing.Point(390, 257);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(191, 101);
+            this.btnUsuarios.Size = new System.Drawing.Size(143, 82);
             this.btnUsuarios.TabIndex = 5;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
@@ -104,20 +98,19 @@ namespace proyectoVeterinaria
             // 
             // btnHorarios
             // 
-            this.btnHorarios.Location = new System.Drawing.Point(756, 316);
-            this.btnHorarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHorarios.Location = new System.Drawing.Point(567, 257);
             this.btnHorarios.Name = "btnHorarios";
-            this.btnHorarios.Size = new System.Drawing.Size(191, 101);
+            this.btnHorarios.Size = new System.Drawing.Size(143, 82);
             this.btnHorarios.TabIndex = 6;
             this.btnHorarios.Text = "Horarios";
             this.btnHorarios.UseVisualStyleBackColor = true;
+            this.btnHorarios.Click += new System.EventHandler(this.btnHorarios_Click);
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1129, 15);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(847, 12);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(124, 28);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(93, 23);
             this.btnCerrarSesion.TabIndex = 7;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -125,19 +118,17 @@ namespace proyectoVeterinaria
             // lblNombreDeUsuario
             // 
             this.lblNombreDeUsuario.AutoSize = true;
-            this.lblNombreDeUsuario.Location = new System.Drawing.Point(963, 21);
-            this.lblNombreDeUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreDeUsuario.Location = new System.Drawing.Point(722, 17);
             this.lblNombreDeUsuario.Name = "lblNombreDeUsuario";
-            this.lblNombreDeUsuario.Size = new System.Drawing.Size(160, 17);
+            this.lblNombreDeUsuario.Size = new System.Drawing.Size(119, 13);
             this.lblNombreDeUsuario.TabIndex = 8;
             this.lblNombreDeUsuario.Text = "Nombre de usuario aqui";
             // 
             // btnMascotas
             // 
-            this.btnMascotas.Location = new System.Drawing.Point(272, 442);
-            this.btnMascotas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMascotas.Location = new System.Drawing.Point(204, 359);
             this.btnMascotas.Name = "btnMascotas";
-            this.btnMascotas.Size = new System.Drawing.Size(191, 101);
+            this.btnMascotas.Size = new System.Drawing.Size(143, 82);
             this.btnMascotas.TabIndex = 9;
             this.btnMascotas.Text = "Mascotas";
             this.btnMascotas.UseVisualStyleBackColor = true;
@@ -145,9 +136,9 @@ namespace proyectoVeterinaria
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 666);
+            this.ClientSize = new System.Drawing.Size(952, 541);
             this.Controls.Add(this.btnMascotas);
             this.Controls.Add(this.lblNombreDeUsuario);
             this.Controls.Add(this.btnCerrarSesion);
@@ -158,7 +149,6 @@ namespace proyectoVeterinaria
             this.Controls.Add(this.btnRegistrarPagos);
             this.Controls.Add(this.btnCitas);
             this.Controls.Add(this.lblBienvenido);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
