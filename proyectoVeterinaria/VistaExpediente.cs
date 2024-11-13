@@ -40,18 +40,19 @@ namespace proyectoVeterinaria
 
         private void btnAgregarExpediente_Click(object sender, EventArgs e)
         {
+            // Verifica si hay una fila seleccionada en el DataGridView
             if (dgvMascotas.SelectedRows.Count > 0)
             {
+                // Obtén el idMascota de la fila seleccionada
                 int idMascota = Convert.ToInt32(dgvMascotas.SelectedRows[0].Cells["IdMascota"].Value);
 
-                // Abrir el formulario de registro de expediente
-                RegistroExpediente registroExpediente = new RegistroExpediente();
-                registroExpediente.CargarHistorial(idMascota); // Cargar historial de la mascota seleccionada
+                // Pasa el idMascota al formulario RegistroExpediente
+                RegistroExpediente registroExpediente = new RegistroExpediente(idMascota);
                 registroExpediente.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione una mascota de la lista.");
+                MessageBox.Show("Por favor, selecciona una mascota de la lista.");
             }
         }
     }

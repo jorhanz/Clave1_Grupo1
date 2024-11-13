@@ -15,7 +15,13 @@ namespace proyectoVeterinaria
 {
     public partial class RegistroExpediente : Form
     {
-        public int IdMascota { get; set; }
+        //public int IdMascota { get; set; }
+        private int idMascota;
+        public RegistroExpediente(int idMascota)
+        {
+            InitializeComponent();
+            this.idMascota = idMascota;
+        }
         public RegistroExpediente()
         {
             InitializeComponent();
@@ -37,18 +43,30 @@ namespace proyectoVeterinaria
             DateTime fechaConsulta = dtpFechaConsulta.Value;
             string descripcion = txtDescripcion.Text;
             int idVeterinario = Convert.ToInt32(cmbVeterinario.SelectedValue);
-            int idMascota = this.IdMascota;
+
+            // Crear una instancia de la capa de negocio y llamar al método para guardar el expediente
             ExpedienteNegocio expedienteNegocio = new ExpedienteNegocio();
-            bool guardado = expedienteNegocio.GuardarExpediente(idMascota, fechaConsulta, descripcion, idVeterinario);
+            bool guardado = expedienteNegocio.GuardarExpediente(this.idMascota, fechaConsulta, descripcion, idVeterinario);
+
             if (guardado)
             {
                 MessageBox.Show("Registro guardado exitosamente.");
-                CargarHistorial(idMascota); 
+                // Puedes recargar el historial clínico o cerrar el formulario si deseas
             }
             else
             {
                 MessageBox.Show("Error al guardar el registro.");
             }
+        }
+
+        private void RegistroExpediente_Load(object sender, EventArgs e)
+        {
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            DataTable veterinarios = usuarioNegocio.ObtenerVeterinarios();
+
+            cmbVeterinario.DataSource = veterinarios;
+            cmbVeterinario.DisplayMember = "NombreCompleto";
+            cmbVeterinario.ValueMember = "IdUsuario";
         }
     }
 }

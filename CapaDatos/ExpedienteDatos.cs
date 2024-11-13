@@ -68,8 +68,8 @@ namespace CapaDatos
             using (MySqlConnection conexion = new Conexion().GetConnection())
             {
                 conexion.Open();
-                string query = "INSERT INTO ExpedienteClinico (IdMascota, FechaConsulta, Descripcion, IdVeterinario) " +
-                               "VALUES (@IdMascota, @FechaConsulta, @Descripcion, @IdVeterinario)";
+                string query = @"INSERT INTO ExpedienteClinico (IdMascota, FechaConsulta, Descripcion, IdVeterinario) 
+                         VALUES (@IdMascota, @FechaConsulta, @Descripcion, @IdVeterinario)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 cmd.Parameters.AddWithValue("@IdMascota", idMascota);
@@ -77,9 +77,17 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Descripcion", descripcion);
                 cmd.Parameters.AddWithValue("@IdVeterinario", idVeterinario);
 
-                return cmd.ExecuteNonQuery() > 0;
-            }
-        }
+                // Log de los parámetros para verificar los valores
+                Console.WriteLine("Valores de los parámetros:");
+                Console.WriteLine("IdMascota: " + idMascota);
+                Console.WriteLine("FechaConsulta: " + fechaConsulta);
+                Console.WriteLine("Descripcion: " + descripcion);
+                Console.WriteLine("IdVeterinario: " + idVeterinario);
 
+                int result = cmd.ExecuteNonQuery();
+                return result > 0;
+
+            }
+        } 
     }
 }

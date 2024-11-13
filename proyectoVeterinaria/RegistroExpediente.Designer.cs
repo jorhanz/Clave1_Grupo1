@@ -118,7 +118,7 @@ namespace proyectoVeterinaria
             this.lblRaza.Location = new System.Drawing.Point(188, 60);
             this.lblRaza.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRaza.Name = "lblRaza";
-            this.lblRaza.Size = new System.Drawing.Size(155, 21);
+            this.lblRaza.Size = new System.Drawing.Size(124, 17);
             this.lblRaza.TabIndex = 48;
             this.lblRaza.Text = "Fecha de consulta";
             // 
@@ -128,7 +128,7 @@ namespace proyectoVeterinaria
             this.label2.Location = new System.Drawing.Point(436, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 21);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 49;
             this.label2.Text = "Veterinario";
             // 
@@ -138,7 +138,7 @@ namespace proyectoVeterinaria
             this.label3.Location = new System.Drawing.Point(188, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 21);
+            this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 50;
             this.label3.Text = "Descripción";
             // 
@@ -160,6 +160,7 @@ namespace proyectoVeterinaria
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistroExpediente";
             this.Text = "RegistroExpediente";
+            this.Load += new System.EventHandler(this.RegistroExpediente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialExpediente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
