@@ -58,5 +58,11 @@ namespace proyectoVeterinaria
             vistaCitas.ShowDialog();
 
         }
+
+        private void btnHistoriaClinica_Click(object sender, EventArgs e)
+        {
+            VistaExpediente vistaExpediente = new VistaExpediente();
+            vistaExpediente.ShowDialog();
+        }
     }
 }

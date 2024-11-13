@@ -86,6 +86,7 @@ namespace proyectoVeterinaria
             this.btnHistoriaClinica.TabIndex = 4;
             this.btnHistoriaClinica.Text = "Historia clinica";
             this.btnHistoriaClinica.UseVisualStyleBackColor = true;
+            this.btnHistoriaClinica.Click += new System.EventHandler(this.btnHistoriaClinica_Click);
             // 
             // btnUsuarios
             // 

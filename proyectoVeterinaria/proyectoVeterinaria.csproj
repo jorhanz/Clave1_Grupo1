@@ -130,6 +130,12 @@
     <Compile Include="RegistrarCita.Designer.cs">
       <DependentUpon>RegistrarCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroExpediente.Designer.cs">
+      <DependentUpon>RegistroExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="VistaCitas.Designer.cs">
       <DependentUpon>VistaCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaExpediente.Designer.cs">
+      <DependentUpon>VistaExpediente.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaMascotas.cs">
       <SubType>Form</SubType>
@@ -184,11 +196,17 @@
     <EmbeddedResource Include="RegistrarCita.resx">
       <DependentUpon>RegistrarCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroExpediente.resx">
+      <DependentUpon>RegistroExpediente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaCitas.resx">
       <DependentUpon>VistaCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaExpediente.resx">
+      <DependentUpon>VistaExpediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaMascotas.resx">
       <DependentUpon>VistaMascotas.cs</DependentUpon>
