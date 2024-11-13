@@ -32,10 +32,10 @@ namespace proyectoVeterinaria
             DataTable historial = expedienteNegocio.ObtenerHistorialPorMascota(idMascota);
             dgvHistorialExpediente.DataSource = historial;
 
-            // Configurar encabezados de las columnas
+            // Configura los encabezados de las columnas si es necesario
             dgvHistorialExpediente.Columns["FechaConsulta"].HeaderText = "Fecha de Consulta";
             dgvHistorialExpediente.Columns["Descripcion"].HeaderText = "Descripción";
-            dgvHistorialExpediente.Columns["NombreVeterinario"].HeaderText = "Veterinario";
+            dgvHistorialExpediente.Columns["IdVeterinario"].HeaderText = "Veterinario";
         }
 
         private void btnGuardarExpediente_Click(object sender, EventArgs e)
@@ -61,6 +61,7 @@ namespace proyectoVeterinaria
 
         private void RegistroExpediente_Load(object sender, EventArgs e)
         {
+            CargarHistorial(idMascota);
             UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
             DataTable veterinarios = usuarioNegocio.ObtenerVeterinarios();
 

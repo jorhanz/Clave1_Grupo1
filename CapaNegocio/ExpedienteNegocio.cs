@@ -23,6 +23,7 @@ namespace CapaNegocio
         }
         public DataTable ObtenerHistorialPorMascota(int idMascota)
         {
+            ExpedienteDatos expedienteDatos = new ExpedienteDatos();
             return expedienteDatos.ObtenerHistorialPorMascota(idMascota);
         }
         public bool GuardarExpediente(int idMascota, DateTime fechaConsulta, string descripcion, int idVeterinario)
